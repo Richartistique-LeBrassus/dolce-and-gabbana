@@ -1,7 +1,7 @@
-"use client"
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { X } from "lucide-react"
+"use client";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { X } from "lucide-react";
 
 interface DrawerProps {
   isOpen: boolean;
@@ -10,9 +10,7 @@ interface DrawerProps {
 }
 
 const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
-  const [query, setQuery] = useState("");
-  const [results, setResults] = useState<any[]>([]);
-    const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState<string>(""); 
 
   return (
     <>
@@ -24,7 +22,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
         onClick={onClose}
         aria-hidden="true"
       />
-    
+
       <motion.aside
         initial={{ x: "100%" }}
         animate={{ x: isOpen ? "0%" : "100%" }}
@@ -43,9 +41,9 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
         >
           <X size={24} />
         </button>
-    
+
         <h2 className="text-white text-xl sm:text-2xl mb-6">Search</h2>
-    
+
         <input
           type="text"
           placeholder="Search..."
@@ -55,16 +53,6 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-    
-        {results.length > 0 && (
-          <ul className="mt-6 space-y-3">
-            {results.map((item) => (
-              <li key={item.objectID} className="text-white border-b border-slate-700 pb-2">
-                {item.name}
-              </li>
-            ))}
-          </ul>
-        )}
       </motion.aside>
     </>
   );

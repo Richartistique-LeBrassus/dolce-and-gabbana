@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import Explore from "@/components/Explore";
 import ReadNext from "@/components/ReadNext";
 import CollectionInfo from "@/components/CollectionInfo";
 import CollectionVideo from "@/components/CollectionVideo";
@@ -7,6 +6,7 @@ import CreditsAndExpansion from "@/components/CreditsAndExpansion";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import { FloatingNav } from "@/components/ui/FloatingNav";
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
     overflow-x-hidden">
       <FloatingNav />
       <Hero />
-      <Explore />
+      <About />
       <CollectionInfo />
       <CollectionVideo />
       <CreditsAndExpansion />

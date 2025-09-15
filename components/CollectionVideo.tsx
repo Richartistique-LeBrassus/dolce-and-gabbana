@@ -28,19 +28,17 @@ const CollectionVideo = () => {
   };
 
   useEffect(() => {
-    if (!videoRef.current) return;
-    videoRef.current.addEventListener("play", handlePlay);
-    videoRef.current.addEventListener("pause", handlePause);
-    return () => {
-      videoRef.current?.removeEventListener("play", handlePlay);
-      videoRef.current?.removeEventListener("pause", handlePause);
-    };
-  }, []);
-
-    useEffect(() => {
-    if (videoRef.current?.paused === false) {
-      setIsPlaying(true);
+    const video = videoRef.current;
+    if (video) {
+      video.addEventListener("play", handlePlay);
+      video.addEventListener("pause", handlePause);
     }
+    return () => {
+      if (video) {
+        video.removeEventListener("play", handlePlay);
+        video.removeEventListener("pause", handlePause);
+      }
+    };
   }, []);
 
   return (
@@ -55,7 +53,7 @@ const CollectionVideo = () => {
           loop
         >
           <source src="/videos/flower-collection.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          Your browser does not support the video tag
         </video>
         <button
           onClick={togglePlay}

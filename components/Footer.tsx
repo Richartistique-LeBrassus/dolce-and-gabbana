@@ -90,10 +90,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-[10px] text-gray-400 py-4 border-y font-serif
+        <div className="text-xs text-gray-400 py-4 border-y font-serif
         border-cyan-200 text-center px-10 sm:px-0">
-          © Dolce & Gabbana S.R.L. 2025 - All rights reserved. 
-          VAT NUMBER 09297890155 – SIAE LICENCE N. 637/1/763 – ALL RIGHTS RESERVED
+          © Non-commercial replica for portfolio use only. All rights to original brands and media remain with their owners.
         </div>
       </div>
     </footer>

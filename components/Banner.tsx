@@ -19,7 +19,7 @@ const Banner = () => {
           <a className='hover:underline'>ALTA MODA</a>
           <a className='hover:underline'> BOUTIQUES</a>
           <a className='hover:underline'>SUSTAINABILITY</a>
-          <a className='hover:underline'>DG MARTINI ®</a>
+          <a className='hover:underline'>DG BARTHES ®</a>
         </div>
       </div>
     </div>
